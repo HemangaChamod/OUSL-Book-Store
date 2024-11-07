@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="admin-login-styles.css?v=1.0">
+    <script>
+        // JavaScript to disable form submission and redirect to another page
+        function handleFormSubmission(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            window.location.href = "admin-interface.html"; // Redirect to the desired page
+        }
+    </script>
     <title>Admin Login</title>
 </head>
 <body>
@@ -20,7 +27,7 @@
             </nav>
             <div class="form-container">
                 <h2>Admin Login</h2>
-                <form action="admin-login.php" method="POST">
+                <form onsubmit="handleFormSubmission(event)">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" required>
 
