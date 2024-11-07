@@ -1,0 +1,206 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+section nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 10px #089da1;
+  background-color: #fff; 
+}
+
+.storeName h1 {
+  font-size: 25px;
+  color: #089da1;
+}
+
+section nav .logo img {
+  width: 100px;
+  cursor: pointer;
+  margin: 8px;
+}
+
+.cart_icon {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.cart_icon:hover {
+  transform: scale(1.2); 
+}
+
+section nav ul {
+  list-style: none;
+}
+
+section nav li {
+  display: inline-block;
+  padding: 35px;
+}
+
+section nav li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+section nav li a:hover {
+  color: #089da1;
+  text-decoration: underline;
+}
+
+/* Container */
+.container {
+  display: flex;
+  margin: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 20%;
+  padding: 20px;
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+
+.sidebar h2 {
+  color: #008ecf;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+  color: #008ecf;
+  text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+  width: 75%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+  color: #008ecf;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #008ecf;
+  box-shadow: 0 0 5px rgba(0, 142, 207, 0.3);
+}
+
+form button {
+  padding: 12px 25px;
+  background-color:#3CB371;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: green;
+}
+
+.order-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.order-table thead th {
+  font-weight: bold;
+  padding: 10px;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.order-table tbody td {
+  padding: 10px;
+  color: #555;
+}
+
+.order-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+/* Delete Account Section */
+#delete-account {
+  margin-top: 280px;
+  padding: 20px;
+  background-color: #ffe6e6;
+  border: 1px solid #ffcccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#delete-account p {
+  color: #b30000;
+  font-weight: bold;
+}
+
+.delete-btn {
+  margin-top:15px;
+  background-color: #ff4b4b;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #e60000;
+}

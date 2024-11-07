@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Use 90% of the viewport height */
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 90%; 
+    max-width: 1200px;
+    height: 95vh;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 60px; 
+
+}
+
+/* Left side styling */
+.form-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 53%; 
+    padding: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.logo{
+    padding-top: 10px;
+}
+
+.storeName h1 {
+    font-size: 25px;
+    color: #089da1;
+}
+
+.form-container {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: -20px; 
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin: 8px 0 4px;
+    color: #333;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+p {
+    margin-top: 10px;
+    color: #666;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Right side styling */
+.image-side {
+    width: 47%;
+    background-color: #e0e0f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 130%; 
+    height: 125%;
+    object-fit: contain;
+    border-radius: 10px;
+}

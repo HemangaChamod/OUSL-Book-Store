@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+section nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;/*This property distributes space between the flex items.The space-around value adds equal space around each item*/
+    box-shadow: 0 0 10px #089da1;
+    background-color: #fff; 
+}
+
+.storeName h1{
+    font-size: 25px;
+    color: #089da1;
+}
+
+section nav .logo img{
+    width: 100px;
+    cursor: pointer;
+    margin: 8px;
+}
+
+.cart_icon {
+    width: 50px; /* Set width as needed */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.cart_icon:hover {
+    transform: scale(1.2); 
+    /*scale(1.2): This means that the element will grow to 120% of its original size (1.0 is the original size, and 1.2 means it increases by 20%)*/
+}
+
+section nav ul{
+    list-style: none;/*This removes the default bullet points from the list items in the unordered list*/
+}
+
+section nav li{
+    display: inline-block;/*This makes each list item (<li>) display in a line (horizontally) */
+    padding: 35px;
+
+}
+
+section nav li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+section nav li a:hover{
+    color: #089da1;
+    text-decoration: underline;
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+    
+}
+
+.browse-books {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+.browse-books h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.filter-options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 25px;
+}
+
+.filter-options label {
+    font-weight: bold;
+    color: #555;
+}
+
+.filter-options input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filter-options button {
+    padding: 10px 20px;
+    background-color: #089da1;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-options button:hover {
+    background-color: #067b7e;
+}
+
+.books-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.book-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+    
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+    /*
+
+    transform property moves the element vertically. Specifically, translateY(-10px) shifts the .book-card 10 pixels up from its original position.
+
+    translateY(-10px): Moves the element 10 pixels upward along the Y-axis. If you used a positive value (e.g., translateY(10px)), the element would move downward instead.
+
+    */
+}
+
+.book-card img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.book-card img:hover {
+    transform: scale(1.05);
+}
+
+.book-card h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.book-card .author,
+.book-card .genre {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.book-card .price {
+    font-weight: bold;
+    color: #089da1;
+    margin-bottom: 10px;
+}
+
+.book-card .description {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 15px;
+    padding: 0 5px;
+    text-align: justify;
+}
+
+.book-card button {
+    padding: 8px 20px;
+    background-color: #089da1;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+.book-card button:hover {
+    background-color: #067b7e;
+}
+
+/* Modal styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+
+}
+
+.modal-content {
+    background-color: #fff; 
+    margin: 10% auto; 
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+    width: 80%; 
+    max-width: 600px; 
+}
+
+.close {
+    color: #888; 
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+
+}
+
+.close:hover,
+.close:focus {
+    color: #ff4c4c; 
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    align-items: flex-start; /* Align items to the start vertically */
+}
+
+.modal-book-image {
+    width: 150px; 
+    height: auto; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+    margin-right: 20px; 
+}
+
+.modal-book-details {
+    display: flex;
+    flex-direction: column; /* Stack details vertically */
+}
+
+.modal-book-details h2 {
+    margin: 0; 
+    font-size: 24px; 
+    color: #333; 
+}
+
+.modal-book-details p {
+    margin: 5px 0; /* Add space between paragraphs */
+    color: #555; 
+}
+
+.modal-book-description {
+    font-size: 16px; 
+    line-height: 1.5; 
+    color: #666; 
+}
+

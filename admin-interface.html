@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="image/favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin-interface-styles.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <section>
+
+        <nav>
+
+            <div class="logo">
+                <img src="image/logo.png">
+            </div>
+
+            <div class="storeName">
+                <h1>OUSL BOOK STORE</h1>
+            </div>
+
+        </nav>
+    </section>
+    <div class="container">
+        <h1>ADMIN DASHBOARD</h1>
+
+        <h2>Add Book</h2>
+        <form id="addBookForm" action="admin-dbm.php" method="POST">
+            <input type="text" name="title" placeholder="Title" required>
+            <input type="text" name="author" placeholder="Author" required>
+            <input type="text" name="genre" placeholder="Genre" required>
+            <input type="number" name="price" placeholder="Price" required>
+            <textarea name="description" placeholder="Description" required></textarea>
+            <input type="text" name="cover_image_path" placeholder="Cover Image Path" required>
+            <button type="submit">Add Book</button>
+        </form>
+        
+
+        <h2>Update Book</h2>
+        <form id="updateBookForm" action="admin-dbm.php" method="POST">
+            <input type="number" id="updateId" placeholder="Book ID" required>
+            <input type="text" id="updateTitle" placeholder="Title">
+            <input type="text" id="updateAuthor" placeholder="Author">
+            <input type="text" id="updateGenre" placeholder="Genre">
+            <input type="number" id="updatePrice" placeholder="Price">
+            <textarea id="updateDescription" placeholder="Description"></textarea>
+            <input type="text" id="updateCoverImagePath" placeholder="Cover Image Path">
+            <button type="submit">Update Book</button>
+        </form>
+
+        <h2>Remove Book</h2>
+        <form id="removeBookForm" action="admin-dbm.php" method="POST">
+            <input type="number" id="removeId" placeholder="Book ID" required>
+            <button type="submit">Remove Book</button>
+        </form>
+    </div>
+</body>
+</html>

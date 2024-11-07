@@ -1,0 +1,498 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+section{
+    width: 100%;
+    height: 100vh;/*The viewport height(vh) is the height of the browser window, so this will make the section take up the full height of the screen.*/
+    background-image: url(image/bg.png);
+    background-size: cover;/*This property ensures that the background image covers the entire area of the <section>*/
+    background-position: center;/*This centers the background image within the <section>*/
+
+}
+
+section nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;/*This property distributes space between the flex items.The space-around value adds equal space around each item*/
+    box-shadow: 0 0 10px #089da1;
+    background-color: #fff; 
+}
+
+section nav .logo img{
+    width: 100px;
+    cursor: pointer;
+    margin: 8px;
+}
+
+.cart_icon {
+    width: 50px; /* Set width as needed */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+
+    /*
+
+    transition Property: It allows you to control the speed of the transition and the specific properties that will be animated.
+
+    transform: This specifies that the transition will apply to the transform property. This means any changes to transformations (like scaling, rotating, translating, etc.) will have a smooth effect.
+
+    0.3s: This indicates the duration of the transition, meaning it will take 0.3 seconds (300 milliseconds) for the transition to complete.
+
+    ease: This is the timing function for the transition. The ease value starts the transition slowly, speeds up, and then slows down again toward the end
+
+    */
+}
+
+.cart_icon:hover {
+    transform: scale(1.2); 
+    /*scale(1.2): This means that the element will grow to 120% of its original size (1.0 is the original size, and 1.2 means it increases by 20%)*/
+}
+
+section nav ul{
+    list-style: none;/*This removes the default bullet points from the list items in the unordered list*/
+}
+
+section nav li{
+    display: inline-block;/*This makes each list item (<li>) display in a line (horizontally) */
+    padding: 35px;
+
+}
+
+section nav li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+section nav li a:hover{
+    color: #089da1;
+    text-decoration: underline;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;/*Allowing to be positioned using offsets without disrupting the normal flow of surrounding elements.*/
+    top: 5%;
+}
+
+.main h1{
+    position: relative;
+    font-size: 55px;
+    top: 5px;
+    left: 25px;
+}
+
+.main h1 span{
+    color: #089da1;
+}
+
+.main p{
+    width: 650px;
+    text-align: justify;
+    line-height: 22px;
+    position: relative;
+    top: 35px;
+    left: 25px;
+}
+
+.main_btn{
+    background: #089da1;
+    padding: 10px 20px;
+    position: relative;/*Allowing to be positioned using offsets without disrupting the normal flow of surrounding elements.*/
+    top: 60px;/*Offsets the button 200px downward from its default position.*/
+    left: 25px;/*Moves the button 25px to the right.*/
+    color: #fff;
+    text-decoration: none;
+}
+
+.main_btn:hover{
+    background-color:#0bb2a5;
+}
+
+.main_img{
+    position: relative;
+    top: 45px;
+    left: 20px;
+    filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.5));
+}
+
+
+/*services*/
+
+.services{ 
+    margin: 50px 0px;/*50px is applied as the top and bottom margin & 0 is applied as the left and right margin*/
+}
+
+.services_box{
+    margin:10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.services_card{
+    text-align: center;
+    width: 310px;
+    height: auto;
+    box-shadow: 0 0 8px #089da1;
+    padding: 15px 10px;
+}
+
+.services_card i{
+    color: #089da1;
+    font-size: 45px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.services_card h3{
+    margin-bottom: 10px;
+}
+
+
+/*Books*/
+
+.featured_boks {
+    padding: 70px 0;
+}
+
+.featured_boks h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.featured_book_box {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.featured_book_card {
+    width: 250px;
+    height: 420px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #919191;
+    margin: auto 20px;
+    transition: box-shadow 0.3s;
+}
+
+.featured_book_card:hover {
+    box-shadow: 0 0 5px #089da1;
+}
+
+/* Image container */
+.featurde_book_img img {
+    width: 150px;
+    margin: auto;
+    transition: transform 0.3s;
+}
+
+/* Scale image on card hover */
+.featured_book_card:hover .featurde_book_img img {
+    transform: scale(1.1);
+}
+
+.featurde_book_tag h2 {
+    margin: 12px;
+    font-family: queen of camelot;
+    font-size: 21px;
+}
+
+.featurde_book_tag .writer {
+    color: #919191;
+}
+
+.featurde_book_tag .categories {
+    color: #089da1;
+    margin-top: 8px;
+}
+
+.featurde_book_tag .book_price {
+    margin-top: 8px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.featurde_book_tag .book_price sub {
+    font-weight: 100;
+    padding: 0 5px;
+}
+
+.featurde_book_tag .f_btn {
+    padding: 8px 20px;
+    border: 2px solid #089da1;
+    text-decoration: none;
+    color: #000;
+}
+
+.f_btn:hover {
+    background-color: #067b7e;
+    color: #fff;
+}
+
+/*arrivals*/
+
+.arrivals{
+    width: 100%;
+    height: 100vh; 
+}
+
+.arrivals h1{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.arrivals_box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px 0;
+}
+
+.arrivals_card{
+    width: 250px;
+    height: 340px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #919191;
+    margin: auto 20px;
+}
+
+
+.arrivals_card:hover{
+    box-shadow: 0 0 5px #089da1;
+}
+
+.arrivals_image{
+    width: 150px;
+    height: 220px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+.arrivals_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+.arrivals_card:hover .arrivals_image img{
+    transform: scale(1.1);
+}
+
+.arrivals_tag p{
+    font-family: queen of camelot;
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.arrivals_icon{
+    color: #089da1;
+    margin-bottom: 18px;
+}
+
+.arrivals_btn{
+    padding: 8px 20px;
+    border: 2px solid #089da1;
+    text-decoration: none;
+    color: #000;
+}
+
+.arrivals_btn:hover{
+    background-color: #067b7e;
+    color: #fff;
+}
+
+/*Banner*/
+
+.banner{
+    width: 100%;
+    height: 50vh;
+    background-image: url(image/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    top:150px;
+}
+
+.banner .banner_btn{
+    padding: 8px 20px;
+    background: #089da1;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    top: 62%;
+    left: 7%;
+}
+
+.banner_btn:hover{
+    background-color: #067b7e;
+    color: #fff;
+
+}
+
+/*reviews*/
+
+.reviews{
+    width: 100%;
+    height: auto;
+}
+
+.reviews h1{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 200px;
+    
+}
+
+.review_box p{
+    font-size: 16px;
+    color: #333; 
+    line-height: 1.6; 
+    font-family: Arial, sans-serif;
+}
+
+.review_box{
+    width: 95%;
+    height: 60vh;
+    margin:5px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review_card{
+    width: 400px;
+    height: 320px;
+    box-shadow: 0 0 8px #089da1;
+    padding: 15px;
+    margin: 0 12px;
+}
+
+.review_card i{
+    float: right;
+    font-size: 120px;
+    position: relative;
+    bottom: 20px;
+    color: #eaeaea;
+}
+
+.card_top img{
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.card p{
+    margin: 10px 0 10px 0;/*top, right, bottom, left*/
+    text-align: justify;
+    line-height: 25px;
+}
+
+
+/*Footer*/
+
+footer{
+    width: 100%;
+    background: #eaeaea;
+}
+
+.footer_main{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tag{
+    margin: 10px 0;
+}
+
+.tag img{
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.tag p{
+    width: 250px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+.tag h1{
+    font-size: 25px;
+    margin: 25px 0;
+    color: #000;
+}
+
+.tag a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.tag i{
+    margin-right: 10px;
+}
+
+.social_link i{
+    margin: 0 5px;
+}
+
+.email_bar{
+    width: 230px;
+    height: 30px;
+    background: rgba(202,202,202);
+    border-radius: 25px;
+}
+
+.email_bar input{
+    width: 200px;
+    padding: 2px 0;
+    position: relative;
+    top: 17%;
+    left: 6%;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    background: none;
+}
+
+.email_bar button{
+    padding: 7px 15px;
+    background: #089da1;
+    border: none;
+    margin-top: 15px;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.email_bar button:hover{
+    background-color: #067b7e;
+    color: #fff;
+}
+

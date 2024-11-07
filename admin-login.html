@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="image/favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin-login-styles.css?v=1.0">
+    <title>Admin Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-side">
+            <nav>
+                <div class="logo">
+                    <img src="image/logo.png" alt="Logo">
+                </div>
+                <div class="storeName">
+                    <h1>OUSL BOOK STORE</h1>
+                </div>
+            </nav>
+            <div class="form-container">
+                <h2>Admin Login</h2>
+                <form action="admin-login.php" method="POST">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="user-register.html">Register here</a></p>
+                <p>Or <a href="user-login.html">Login as User</a></p>
+            </div>
+        </div>
+
+        <!-- Right side: Optional Image (you can replace it with any image or leave it out) -->
+        <div class="image-side">
+            <div class="image-container">
+                <img src="image/register.png" alt="Illustration">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+section nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;/*This property distributes space between the flex items.The space-around value adds equal space around each item*/
+    box-shadow: 0 0 10px #089da1;
+    background-color: #fff; 
+}
+
+.storeName h1{
+    font-size: 25px;
+    color: #089da1;
+}
+
+section nav .logo img{
+    width: 100px;
+    cursor: pointer;
+    margin: 8px;
+}
+
+.cart_icon {
+    width: 50px; /* Set width as needed */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.cart_icon:hover {
+    transform: scale(1.2); 
+    /*scale(1.2): This means that the element will grow to 120% of its original size (1.0 is the original size, and 1.2 means it increases by 20%)*/
+}
+
+section nav ul{
+    list-style: none;/*This removes the default bullet points from the list items in the unordered list*/
+}
+
+section nav li{
+    display: inline-block;/*This makes each list item (<li>) display in a line (horizontally) */
+    padding: 35px;
+
+}
+
+section nav li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+section nav li a:hover{
+    color: #089da1;
+    text-decoration: underline;
+}
+
+#cart {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#cart h1 {
+    text-align: center;
+    color: #089da1;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+#cart-items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.cart-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.cart-item:hover {
+    background-color: #f1f1f1;
+}
+
+.cart-item img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.cart-item h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+.cart-total {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: right;
+    color: #089da1;
+}
+
+#cart .cart-footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.checkout-button {
+    width: 20%;
+    padding: 14px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    
+}
+
+.checkout-button:hover {
+    background-color: #333333;
+}
+
+.cart-item-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.increase-button,
+.decrease-button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.increase-button:hover,
+.decrease-button:hover {
+    background-color: #45a049;
+}
+
+.remove-button {
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.remove-button:hover {
+    opacity: 0.6;
+}

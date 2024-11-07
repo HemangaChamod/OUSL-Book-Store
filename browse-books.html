@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="image/favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUSL BOOK STORE</title>
+    <link rel="stylesheet" href="browse-book-styles.css">
+    <script src="browse-book-filter.js"></script>
+    <script src="book-cart-script.js"></script>
+</head>
+<body>
+    <section>
+
+        <nav>
+
+            <div class="logo">
+                <img src="image/logo.png">
+            </div>
+
+            <div class="storeName">
+                <h1>OUSL BOOK STORE</h1>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#Featured">Featured</a></li>
+                <li><a href="index.html#Arrivals">Arrivals</a></li>
+                <li><a href="user-register.html">Sign Up / Login</a></li>
+                <li>
+                    <a href="book-cart.html">
+                        <img src="image/cart_icon.png" alt="Cart" class="cart_icon">
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </section>
+
+    <div class="notification" id="cartNotification">Added to cart</div>
+
+<section class="browse-books">
+    <h1>Browse Books</h1>
+
+    <!-- Filter Options -->
+    <div class="filter-options">
+        <label for="title-search">Title:</label>
+        <input type="text" id="title-search" placeholder="Search by title">
+
+        <label for="author-search">Author:</label>
+        <input type="text" id="author-search" placeholder="Search by author">
+
+        <label for="genre-search">Genre:</label>
+        <input type="text" id="genre-search" placeholder="Search by genre">
+        
+        <button onclick="filterBooks()">Search</button>
+    </div>
+
+    <!-- Books Display -->
+    <div class="books-display">
+        <div class="book-card">
+            <img src="image/book_1.jpg" alt="Book Cover">
+            <h2>Silent Patient</h2>
+            <p class="author">by Alex Michaelides</p>
+            <p class="genre">Mystery, Thriller, Psychological</p>
+            <p class="price">$20.99</p>
+            <p class="description">A thrilling novel about a woman's silence and the unraveling mystery behind it.</p>
+            <button onclick="addToCart('Silent Patient', 20.99, 'image/book_1.jpg')">Add to Cart</button>
+            <button onclick="showBookDetails('Silent Patient', 'Alex Michaelides', 'Mystery, Thriller, Psychological', 20.99, 'A thrilling novel about a woman\'s silence and the unraveling mystery behind it.', 'image/book_1.jpg')">View Details</button>
+        </div>
+
+        <div class="book-card">
+            <img src="image/book_2.jpg" alt="Book Cover">
+            <h2>The Midnight Library</h2>
+            <p class="author">by Matt Haig</p>
+            <p class="genre">Fantasy, Fiction</p>
+            <p class="price">$18.99</p>
+            <p class="description">A story of choices, second chances, and the lives that could have been.</p>
+            <button onclick="addToCart('The Midnight Library', 18.99, 'image/book_2.jpg')">Add to Cart</button>
+            <button onclick="showBookDetails('The Midnight Library', 'Matt Haig', 'Fantasy, Fiction', 18.99, 'A story of choices, second chances, and the lives that could have been.', 'image/book_2.jpg')">View Details</button>
+        </div>
+    
+        <div class="book-card">
+            <img src="image/book_3.jpg" alt="Book Cover">
+            <h2>Where the Crawdads Sing</h2>
+            <p class="author">by Delia Owens</p>
+            <p class="genre">Mystery, Romance</p>
+            <p class="price">$15.50</p>
+            <p class="description">A tale of love, mystery, and survival set in the marshlands.</p>
+            <button onclick="addToCart('Where the Crawdads Sing', 15.50, 'image/book_3.jpg')">Add to Cart</button>
+            <button onclick="showBookDetails('Where the Crawdads Sing', 'Delia Owens', 'Mystery, Romance', 15.50, 'A tale of love, mystery, and survival set in the marshlands.', 'image/book_3.jpg')">View Details</button>
+        </div>
+    
+        <div class="book-card">
+            <img src="image/book_4.jpg" alt="Book Cover">
+            <h2>Atomic Habits</h2>
+            <p class="author">by James Clear</p>
+            <p class="genre">Self-Help, Psychology</p>
+            <p class="price">$22.00</p>
+            <p class="description">A practical guide on how small habits can make a big impact.</p>
+            <button onclick="addToCart('Atomic Habits', 22.00, 'image/book_4.jpg')">Add to Cart</button>
+            <button onclick="showBookDetails('Atomic Habits', 'James Clear', 'Self-Help, Psychology', 22.00, 'A practical guide on how small habits can make a big impact.', 'image/book_4.jpg')">View Details</button>
+        </div>
+    
+        <div class="book-card">
+            <img src="image/book_5.jpg" alt="Book Cover">
+            <h2>Becoming</h2>
+            <p class="author">by Michelle Obama</p>
+            <p class="genre">Biography, Memoir</p>
+            <p class="price">$25.99</p>
+            <p class="description">A deeply personal and inspiring memoir by the former First Lady of the United States.</p>
+            <button onclick="addToCart('Becoming', 25.99, 'image/book_5.jpg')">Add to Cart</button>
+            <button onclick="showBookDetails('Becoming', 'Michelle Obama', 'Biography, Memoir', 25.99, 'A deeply personal and inspiring memoir by the former First Lady of the United States.', 'image/book_5.jpg')">View Details</button>
+        </div>
+    
+        <div class="book-card">
+            <img src="image/book_6.jpg" alt="Book Cover">
+            <h2>Educated</h2>
+            <p class="author">by Tara Westover</p>
+            <p class="genre">Memoir, Non-Fiction</p>
+            <p class="price">$17.99</p>
+            <p class="description">A powerful story about the transformative power of education.</p>
+            <button onclick="addToCart('Educated', 17.99, 'image/book_6.jpg')">Add to Cart</button>
+            <button onclick="showBookDetails('Educated', 'Tara Westover', 'Memoir, Non-Fiction', 17.99, 'A powerful story about the transformative power of education.', 'image/book_6.jpg')">View Details</button>
+        </div>
+    
+        <div class="book-card">
+            <img src="image/book_13.png" alt="Book Cover">
+            <h2>Good to Great</h2>
+            <p class="author">by Jim Collins</p>
+            <p class="genre">Business, Self-Help</p>
+            <p class="price">$19.99</p>
+            <p class="description">An exploration of what it takes to transform a good company into a great one.</p>
+            <button onclick="addToCart('Good to Great', 19.99, 'image/book_13.png')">Add to Cart</button>
+            <button onclick="showBookDetails('Good to Great', 'Jim Collins', 'Business, Self-Help', 19.99, 'An exploration of what it takes to transform a good company into a great one.', 'image/book_13.png')">View Details</button>
+        </div>
+    
+        <div class="book-card">
+            <img src="image/book_8.png" alt="Book Cover">
+            <h2>The Power of Now</h2>
+            <p class="author">by Eckhart Tolle</p>
+            <p class="genre">Spirituality, Self-Help</p>
+            <p class="price">$16.50</p>
+            <p class="description">A guide to achieving peace and fulfillment by living in the present moment.</p>
+            <button onclick="addToCart('The Power of Now', 16.50, 'image/book_8.png')">Add to Cart</button>
+            <button onclick="showBookDetails('The Power of Now', 'Eckhart Tolle', 'Spirituality, Self-Help', 16.50, 'A guide to achieving peace and fulfillment by living in the present moment.', 'image/book_8.png')">View Details</button>
+        </div>
+    </div>
+
+</section>
+
+    <!-- Modal for Book Details -->
+<div id="bookModal" class="modal"> <!--The id="bookModal" allows for specific targeting via JavaScript and CSS, while class="modal" can be used for styling.-->
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <!-- The span element represents a close button for the modal. The &times; symbol is an HTML entity for the multiplication sign (×), which visually represents a close icon. -->
+        <div class="modal-body">
+            <img id="modalBookImage" src="" alt="Book Cover" class="modal-book-image">
+            <div class="modal-book-details">
+                <h2 id="modalBookTitle"></h2>
+                <p id="modalBookAuthor"></p>
+                <p id="modalBookGenre"></p>
+                <p id="modalBookPrice"></p>
+                <p id="modalBookDescription"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        function showBookDetails(title, author, genre, price, description, image) { 
+            //This function is called to populate the modal with the book's details and display it. The function takes six parameters (title, author, genre, price, description, image) and updates the corresponding HTML elements with these values.
+            document.getElementById('modalBookTitle').innerText = title;
+            document.getElementById('modalBookAuthor').innerText = 'by ' + author;
+            document.getElementById('modalBookGenre').innerText = 'Genre: ' + genre;
+            document.getElementById('modalBookPrice').innerText = 'Price: $' + price.toFixed(2);
+            document.getElementById('modalBookDescription').innerText = description;
+            document.getElementById('modalBookImage').src = image;
+    
+        // Display the modal
+        document.getElementById('bookModal').style.display = 'block';
+        }
+
+        function closeModal() {//This function hides the modal by setting its display style to none.
+            document.getElementById('bookModal').style.display = 'none';
+        }
+
+        // This part of the script adds an event listener to the window that checks if a click event occurs outside of the modal. If so, it calls the closeModal() function to close the modal.
+        window.onclick = function(event) {
+        const modal = document.getElementById('bookModal');
+        if (event.target == modal) {
+        closeModal();
+        }
+    };
+
+    </script>
+
+</body>
+</html>
