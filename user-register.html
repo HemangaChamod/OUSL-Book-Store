@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="user-register-styles.css?v=1.0">
+    <script>
+        // JavaScript to disable form submission and redirect to another page
+        function handleFormSubmission(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            window.location.href = "user-account.html"; // Redirect to the desired page
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -21,7 +28,7 @@
             </nav>
             <div class="form-container">
                 <h2>Register</h2>
-                <form action="user-register.php" method="post">
+                <form action="user-register.php" method="post" onsubmit="handleFormSubmission(event)">
                     <label for="first_name">First Name</label>
                     <input type="text" id="first_name" name="first_name" required>
                 
