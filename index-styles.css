@@ -496,3 +496,70 @@ footer{
     color: #fff;
 }
 
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main_img img {
+        max-width: 90%;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+    .services_card {
+        width: 100%;
+    }
+
+    .featured_book_box, .arrivals_box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer .footer_main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main_tag h1 {
+        font-size: 24px;
+    }
+
+    .main_btn {
+        width: 100%;
+    }
+
+    .featured_book_card, .arrivals_card {
+        width: 100%;
+    }
+
+    .review_card {
+        padding: 10px;
+    }
+
+    footer .email_bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer input[type="text"] {
+        width: 100%;
+    }
+
+    footer button {
+        width: 100%;
+    }
+}
+
+
