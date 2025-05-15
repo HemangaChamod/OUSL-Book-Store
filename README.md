@@ -1,4 +1,4 @@
 
 ## 🚀 Live Demo
 
-🔗 https://hemangachamod.github.io/ouslbookstore/
+🔗 https://hemangachamod.github.io/OUSL-Book-Store/
